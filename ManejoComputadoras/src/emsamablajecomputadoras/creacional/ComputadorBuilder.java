@@ -9,14 +9,14 @@ protected Computador computador;
 	}
 	
 	
-	abstract void DefinirComputador();
+	public abstract void DefinirComputador();
 	
-	abstract void DefinirAlmacenamiento();
+	public abstract void DefinirAlmacenamiento();
 	
-	abstract void DefinirCoolerExterno();
+	public abstract void DefinirCoolerExterno();
 	
-	abstract void ConstruirSO();
+	public abstract void ConstruirSO();
 	
-	abstract void ConstruirMainboard( );
+	public abstract void ConstruirMainboard( );
 
 }

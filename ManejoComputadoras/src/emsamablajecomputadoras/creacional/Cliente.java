@@ -5,13 +5,24 @@ public class Cliente {
 	
 public static void main(String[] args) {
 		
-		Director director = new Director(new asusrogeBuilder());
+		//Director 1
+		Director directorRoge = new Director(new asusrogeBuilder());
+		directorRoge.construirComputador();
 		
-		director.construirComputador();
-		Computador pc = director.getComputador();
+		//computador creado por el director 1
+		Computador pcRoge = directorRoge.getComputador();
 		
-		System.out.println(pc.getModelo());
-		System.out.println(pc.getOs());
-		System.out.println(pc.getPlaca());
+		//Director 2
+		Director directorZenBook = new Director(new asusZenBookBuilder());
+		directorZenBook.construirComputador();
+		
+		//computador creado por el director 2
+		Computador pcZenBook = directorZenBook.getComputador();
+		
+		System.out.println("Computadora #1");
+		System.out.println(pcRoge.especificacionesTecnicas());
+		System.out.println();
+		System.out.println("Computadora #2");
+		System.out.println(pcZenBook.especificacionesTecnicas());
 	}
 }
