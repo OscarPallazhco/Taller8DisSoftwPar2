@@ -5,7 +5,7 @@ public class Cliente {
 	
 public static void main(String[] args) {
 		
-		Director director = new Director();
+		Director director = new Director(new asusrogeBuilder());
 		
 		director.construirComputador();
 		Computador pc = director.getComputador();
