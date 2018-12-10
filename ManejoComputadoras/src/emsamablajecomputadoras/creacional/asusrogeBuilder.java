@@ -3,41 +3,39 @@ package emsamablajecomputadoras.creacional;
 public class asusrogeBuilder extends ComputadorBuilder{
 
 	@Override
-	void DefinirComputador() {
+	public void DefinirComputador() {
 		// TODO Auto-generated method stub
-		SistemaOperativo os = new SistemaOperativo("Windows 10", 64, "Pro");
-		Mainboard mainb = new Mainboard("Strix", "x99");
-		Computador c = new Computador(34, os, 1000, mainb, "Asus", "ROG");
+		SistemaOperativo os = null;
+		Mainboard mainb = null;
+		computador = new Computador(34, os, 1000, mainb, "Asus", "ROG");
 	}
 
 	@Override
-	void DefinirAlmacenamiento() {
+	public void DefinirAlmacenamiento() {
 		// TODO Auto-generated method stub
 		computador.setAlmacenamiento(1000);
 		
 	}
 
 	@Override
-	void DefinirCoolerExterno() {
+	public void DefinirCoolerExterno() {
 		// TODO Auto-generated method stub
 		computador.setCoolerExterno(false);
 		
 	}
 
 	@Override
-	void ConstruirSO() {
-		// TODO Auto-generated method stub
-		SistemaOperativo os = new SistemaOperativo("Windows 10", 64, "Pro");
-		computador.setOs(os);
+	public void ConstruirSO() {
+		// TODO Auto-generated method stub		
+		computador.setOs(new SistemaOperativo("Windows 10", 64, "Pro"));
 		
 		
 	}
 
 	@Override
-	void ConstruirMainboard() {
-		// TODO Auto-generated method stub
-		Mainboard mainb = new Mainboard("Strix x99", "99");
-		computador.setPlaca(mainb);
+	public void ConstruirMainboard() {
+		// TODO Auto-generated method stub		
+		computador.setPlaca(new Mainboard("Strix", "x99"));
 		
 	}
 	
