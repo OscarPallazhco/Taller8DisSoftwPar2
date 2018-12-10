@@ -12,11 +12,10 @@ public class Director {
 	
 	public void construirComputador() {
 		
-		
+		builder.DefinirComputador();
 		builder.ConstruirMainboard();
 		builder.ConstruirSO();
-		builder.DefinirAlmacenamiento();
-		builder.DefinirComputador();
+		builder.DefinirAlmacenamiento();		
 		builder.DefinirCoolerExterno();
 		
 	}
